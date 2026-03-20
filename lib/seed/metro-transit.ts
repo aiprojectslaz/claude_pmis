@@ -305,3 +305,24 @@ export const documents = [
   { name: "Integration Test Plan", type: "Testing", version: "—", status: "Missing", viewable: false },
   { name: "UAT Plan", type: "Testing", version: "—", status: "Draft", viewable: false },
 ];
+
+// ── KPI register (Measurement domain) ────────────────────────────────────────
+
+export const kpiRegister = [
+  { id: "KPI-01", metric: "SPI", value: "0.94", target: "≥ 1.00", trend: "Down", domain: "Planning", status: "Watch" },
+  { id: "KPI-02", metric: "CPI", value: "1.02", target: "≥ 1.00", trend: "Stable", domain: "Planning", status: "OK" },
+  { id: "KPI-03", metric: "Sprint velocity", value: "14 pts", target: "18 pts", trend: "Down", domain: "Dev Approach", status: "Watch" },
+  { id: "KPI-04", metric: "Deliverable completion", value: "63%", target: "70%", trend: "Up", domain: "Delivery", status: "Watch" },
+  { id: "KPI-05", metric: "Stakeholder engagement score", value: "—", target: "Defined", trend: "—", domain: "Stakeholder", status: "Missing" },
+  { id: "KPI-06", metric: "Team velocity (defined in register)", value: "—", target: "Defined", trend: "—", domain: "Team", status: "Missing" },
+  { id: "KPI-07", metric: "Open risks", value: "7", target: "≤ 5", trend: "Stable", domain: "Uncertainty", status: "Watch" },
+];
+
+// ── Work items (Project Work domain) ─────────────────────────────────────────
+
+export const workItems = [
+  { id: "WI-01", item: "SigTech hardware delivery", type: "Procurement", owner: "J. Park", dueDay: 30, status: "Overdue" },
+  { id: "WI-02", item: "SigTech procurement audit", type: "Audit", owner: "J. Park", dueDay: 30, status: "Overdue — 46 days" },
+  { id: "WI-03", item: "Civil works phase 1 resource booking", type: "Resource", owner: "L. Torres", dueDay: 45, status: "On track" },
+  { id: "WI-04", item: "Signal systems vendor verification", type: "Procurement", owner: "J. Park", dueDay: 78, status: "Not started" },
+];

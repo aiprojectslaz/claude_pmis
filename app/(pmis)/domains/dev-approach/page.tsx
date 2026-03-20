@@ -1,4 +1,7 @@
-import { PlaceholderPage } from "@/components/ui/PlaceholderPage";
+import { DomainPage } from "@/components/domains/DomainPage";
+import { domainConfigs } from "@/lib/domain-configs";
+
 export default function DevApproachDomainPage() {
-  return <PlaceholderPage title="Dev Approach &amp; Lifecycle" domain="PMBOK 7 Domain" stage={5} description="Approach configurator, lifecycle view, and approach impact preview — coming in Stage 5." />;
+  const c = domainConfigs.dev;
+  return <DomainPage domainId="dev" {...c} />;
 }

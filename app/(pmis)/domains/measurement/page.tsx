@@ -1,4 +1,7 @@
-import { PlaceholderPage } from "@/components/ui/PlaceholderPage";
+import { DomainPage } from "@/components/domains/DomainPage";
+import { domainConfigs } from "@/lib/domain-configs";
+
 export default function MeasurementDomainPage() {
-  return <PlaceholderPage title="Measurement" domain="PMBOK 7 Domain" stage={4} description="AI panel · Health check · KPI register · Plan summary — coming in Stage 4." />;
+  const c = domainConfigs.measurement;
+  return <DomainPage domainId="measurement" {...c} />;
 }
