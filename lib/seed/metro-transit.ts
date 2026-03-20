@@ -241,3 +241,67 @@ export const swDeliverables = [
     ],
   },
 ];
+
+// ── Charter sections ─────────────────────────────────────────────────────────
+
+export const charterSections = [
+  { section: "Project purpose", content: "Upgrade Metro City's signal infrastructure to support 40% capacity increase by 2027.", status: "Approved" },
+  { section: "Sponsor", content: "D. Reyes — Deputy Director, Metro City Transport Authority", status: "Signed" },
+  { section: "PM authority", content: "PM authorised to approve changes up to $25,000 and schedule adjustments up to 5 days without CCB review.", status: "Approved" },
+  { section: "Budget", content: "$4,200,000 BAC (Budget at Completion)", status: "Approved" },
+  { section: "Milestones", content: "M1: Civil works complete Day 45 · M2: Signal systems Day 78 · M3: SW integration Day 110 · Go-live Day 122", status: "Approved" },
+  { section: "Success criteria", content: "System availability ≥ 99.5%, all UAT sign-off obtained, no P1 defects at go-live", status: "Approved" },
+  { section: "Constraints", content: "No service interruption > 2 hours during peak periods. Regulatory compliance by Day 90.", status: "Approved" },
+  { section: "Assumptions", content: "SigTech hardware delivered by Day 30. City identity provider available for integration by Day 60.", status: "Approved" },
+];
+
+// ── Charter amendment log ─────────────────────────────────────────────────────
+
+export const charterAmendments = [
+  { id: "AMD-01", date: "Day 12", change: "Go-live extended from Day 115 to Day 122 — regulatory review timeline extended", requestedBy: "J. Park", status: "Approved" },
+  { id: "AMD-02", date: "Day 34", change: "Budget reallocated: $18k from contingency to SW integration (C. Mwangi resource extension)", requestedBy: "PM", status: "Approved" },
+];
+
+// ── PM Plans (8 subsidiary plans) ────────────────────────────────────────────
+
+export const pmPlans = [
+  { id: "SP-01", name: "Schedule Management Plan", domain: "Planning", domainPath: "/domains/planning", summary: "Hybrid schedule baseline using MS Project for civil/signal workstreams and sprint cadence for SW integration.", status: "Approved" },
+  { id: "SP-02", name: "Cost Management Plan", domain: "Planning", domainPath: "/domains/planning", summary: "EVM-based cost control. PM authority to $25k variance. Monthly EAC reforecast.", status: "Approved" },
+  { id: "SP-03", name: "Scope Management Plan", domain: "Planning", domainPath: "/domains/planning", summary: "WBS-based scope control. All scope changes via CCB. SW integration backlog managed via sprint planning.", status: "Draft" },
+  { id: "SP-04", name: "Risk Management Plan", domain: "Uncertainty", domainPath: "/domains/uncertainty", summary: "Bi-weekly risk reviews (civil/signal) and sprint-cadence reviews (SW integration). Escalation at HIGH rating.", status: "Approved" },
+  { id: "SP-05", name: "Stakeholder Engagement Plan", domain: "Stakeholder", domainPath: "/domains/stakeholders", summary: "Engagement matrix updated monthly. Resistant stakeholders require targeted comms within 7 days.", status: "Draft" },
+  { id: "SP-06", name: "Quality Management Plan", domain: "Delivery", domainPath: "/domains/delivery", summary: "DoD required for all deliverables before acceptance. UAT gate before go-live. Zero P1 defects policy.", status: "Draft" },
+  { id: "SP-07", name: "Resource Management Plan", domain: "Team", domainPath: "/domains/team", summary: "Charter sign-off required from all team members. Workstream ownership assigned. Retros each sprint.", status: "Approved" },
+  { id: "SP-08", name: "Procurement Management Plan", domain: "Project Work", domainPath: "/domains/project-work", summary: "SigTech Inc. primary vendor. Procurement audits every 30 days. Current audit 46 days overdue.", status: "Approved" },
+];
+
+// ── Assumptions ───────────────────────────────────────────────────────────────
+
+export const assumptions = [
+  { id: "ASM-01", assumption: "SigTech hardware delivered by Day 30", domain: "Uncertainty", linkedRisk: "R-04", status: "At risk" },
+  { id: "ASM-02", assumption: "City identity provider available for integration by Day 60", domain: "Planning", linkedRisk: "R-01", status: "Valid" },
+  { id: "ASM-03", assumption: "No major scope change requests after baseline", domain: "Planning", linkedRisk: "R-02", status: "Watch" },
+  { id: "ASM-04", assumption: "Regulatory approval obtained by Day 90", domain: "Uncertainty", linkedRisk: "R-01", status: "Valid" },
+  { id: "ASM-05", assumption: "Transit Workers Union cooperative during cutover", domain: "Stakeholder", linkedRisk: "—", status: "Valid" },
+];
+
+// ── Lessons learned ───────────────────────────────────────────────────────────
+
+export const lessons = [
+  { id: "LL-01", lesson: "Scope baseline for SW integration should have been completed in Week 1 — 5 deliverables still unbaselined at Week 4", phase: "Planning", domain: "Planning", action: "Baseline all remaining deliverables by Day 35 (AI draft scope statements ready)" },
+  { id: "LL-02", lesson: "Vendor hardware dependencies need earlier risk entry — R-04 identified at Week 3, should have been Day 1", phase: "Initiation", domain: "Uncertainty", action: "Added to risk register. Response plan drafted." },
+  { id: "LL-03", lesson: "Stakeholder engagement cadence for resistant stakeholders should be ≤ 14 days — M. Okafor at 18 days", phase: "Executing", domain: "Stakeholder", action: "AI-drafted update pending PM approval" },
+];
+
+// ── Documents ────────────────────────────────────────────────────────────────
+
+export const documents = [
+  { name: "Project Charter", type: "Governance", version: "v1.2", status: "Approved", viewable: true },
+  { name: "Scope Baseline — Civil Works", type: "Baseline", version: "v1.0", status: "Approved", viewable: true },
+  { name: "Scope Baseline — Signal Systems", type: "Baseline", version: "v1.0", status: "Approved", viewable: true },
+  { name: "Scope Baseline — SW Integration", type: "Baseline", version: "—", status: "Missing", viewable: false },
+  { name: "Risk Register", type: "Register", version: "v1.4", status: "Current", viewable: true },
+  { name: "SigTech Procurement Contract", type: "Procurement", version: "v1.0", status: "Signed", viewable: true },
+  { name: "Integration Test Plan", type: "Testing", version: "—", status: "Missing", viewable: false },
+  { name: "UAT Plan", type: "Testing", version: "—", status: "Draft", viewable: false },
+];
